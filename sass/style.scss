@@ -6,4 +6,44 @@
 
 body {
     background-color: #29323c;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    row-gap: 5vh;
+    color: #f4f4f4;
+    font-family: sans-serif;
+    height: 95vh;
+    padding: 5vh 5vw;
+    border: 2px solid red;
+    h1 {
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 1rem;
+        font-size: clamp(1rem, 4vw, 2rem);
+    }
+}
+
+.tag-list {
+    list-style: none;
+
+    li {
+        padding: 1rem;
+        background: #485563;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem -0.25rem #000;
+    }
+}
+
+.scroller {
+    // width: clamp(250px, 40vw, 600px);
+    max-width: 600px;
+    outline: 3px solid lime;
+
+    // INNER SCROLLER
+    .scroller__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding-block: 1rem;
+    }
 }
