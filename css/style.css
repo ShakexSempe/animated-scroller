@@ -12,9 +12,9 @@ body {
   row-gap: 5vh;
   color: #f4f4f4;
   font-family: sans-serif;
-  height: 95vh;
+  height: 100vh;
   padding: 5vh 5vw;
-  border: 2px solid red;
+  border: 3px solid #a8dcf0;
 }
 body h1 {
   text-align: center;
@@ -35,13 +35,22 @@ body h1 {
 
 .scroller {
   max-width: 600px;
-  outline: 3px solid lime;
+  margin-inline: auto;
+  width: clamp(300px, 40vw, 600px);
 }
 .scroller .scroller__inner {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   padding-block: 1rem;
+}
+.scroller[data-animated=true] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+.scroller[data-animated=true] .scroller__inner {
+  flex-wrap: nowrap;
 }
 
 /*# sourceMappingURL=style.css.map */

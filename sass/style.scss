@@ -12,9 +12,9 @@ body {
     row-gap: 5vh;
     color: #f4f4f4;
     font-family: sans-serif;
-    height: 95vh;
+    height: 100vh;
     padding: 5vh 5vw;
-    border: 2px solid red;
+    border: 3px solid hsl(197, 71%, 80%);
     h1 {
         text-align: center;
         text-transform: capitalize;
@@ -35,9 +35,11 @@ body {
 }
 
 .scroller {
-    // width: clamp(250px, 40vw, 600px);
+    // outline: 3px solid lime;
     max-width: 600px;
-    outline: 3px solid lime;
+    margin-inline: auto;
+    width: clamp(300px, 40vw, 600px);
+    
 
     // INNER SCROLLER
     .scroller__inner {
@@ -45,5 +47,17 @@ body {
         flex-wrap: wrap;
         gap: 1rem;
         padding-block: 1rem;
+    }
+
+
+    // ** SCROLLER WITH PREFERS MOTION ON STYLE ** //
+    &[data-animated=true] {
+        overflow: hidden;
+        -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+
+        .scroller__inner {
+            flex-wrap: nowrap;
+        }
     }
 }
