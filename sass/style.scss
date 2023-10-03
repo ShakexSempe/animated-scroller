@@ -9,13 +9,13 @@ body {
     display: grid;
     place-items: center;
     place-content: center;
-    row-gap: 5vh;
+    gap: 1rem;
     color: #f4f4f4;
     font-family: sans-serif;
     height: 100vh;
     padding: 5vh 5vw;
     border: 3px solid hsl(197, 71%, 80%);
-    overflow-x: hidden;
+    overflow: hidden;
     h1 {
         text-align: center;
         text-transform: capitalize;
@@ -39,7 +39,7 @@ body {
 
 .scroller {
     // outline: 3px solid lime;
-    // width: clamp(350px, 40vw, 600px);
+    width: clamp(350px, 40vw, 600px);
     max-width: 600px;
     margin-inline: auto;
     z-index: -1;
