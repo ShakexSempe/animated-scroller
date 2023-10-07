@@ -37,5 +37,12 @@ body {
         font-size: .95rem;
         font-size: clamp(.95rem, 2vw, 1rem);
     }
+
+    &.img-list {
+        li {
+            padding: 0;
+            overflow: hidden;
+        }
+    }
 }
 
