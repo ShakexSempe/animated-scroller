@@ -14,6 +14,7 @@ function addAnimation() {
 
         scrollerContent.forEach(item => {
             const duplicatedItem = item.cloneNode(true);
+            // PREVENT DUPLICATED ITEMS FROM BEING READ BY SCREEN READERS
             duplicatedItem.setAttribute('aria-hidden', true);
             console.log(duplicatedItem);
             scrollerInner.appendChild(duplicatedItem);
