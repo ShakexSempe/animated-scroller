@@ -26,8 +26,17 @@
         .scroller__inner {
             width: max-content;
             flex-wrap: nowrap;
-            animation: scroll 20s linear infinite;
+            animation: 
+            scroll var(--animation-duration, 40s)
+            var(--_animation-direction, forwards)
+            linear 
+            infinite;
         }
+    }
+
+    // ** SCROLLER VARIABLE OPTIONS ** //
+    &[data-direction=right] {
+        --_animation-direction: reverse;
     }
 }
 
