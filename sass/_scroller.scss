@@ -35,6 +35,11 @@
     }
 
     // ** SCROLLER VARIABLE OPTIONS ** //
+    // DEFAULT DIRECTION - RIGHT TO LEFT = FORWARDS
+    &[data-direction=left] {
+        --_animation-direction: forwards;
+    }
+    // REVERSE DIRECTION - LEFT TO RIGHT = REVERSE
     &[data-direction=right] {
         --_animation-direction: reverse;
     }

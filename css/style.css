@@ -20,6 +20,9 @@
   flex-wrap: nowrap;
   animation: scroll var(--animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
 }
+.scroller[data-direction=left] {
+  --_animation-direction: forwards;
+}
 .scroller[data-direction=right] {
   --_animation-direction: reverse;
 }
