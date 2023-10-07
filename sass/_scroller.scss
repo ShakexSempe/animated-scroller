@@ -38,7 +38,7 @@
             width: max-content;
             flex-wrap: nowrap;
             animation: 
-            scroll var(--animation-duration, 40s)
+            scroll var(--_animation-duration, 40s)
             var(--_animation-direction, forwards)
             linear 
             infinite;
@@ -53,6 +53,14 @@
     // REVERSE DIRECTION - LEFT TO RIGHT = REVERSE
     &[data-direction=right] {
         --_animation-direction: reverse;
+    }
+
+    // SPEED VARIABLES
+    &[data-speed=slow] {
+        --_animation-duration: 60s;
+    }
+    &[data-speed=fast] {
+        --_animation-duration: 20s;
     }
 }
 
